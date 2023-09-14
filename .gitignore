@@ -75,3 +75,4 @@ PhoneTest1/Plugins/*/Intermediate/*
 # Cache files for the editor to use
 PhoneTest1/DerivedDataCache/*
 *.ddc
+PhoneTest1/Content/ParagonGideon/*
