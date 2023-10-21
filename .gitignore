@@ -76,3 +76,4 @@ PhoneTest1/Plugins/*/Intermediate/*
 PhoneTest1/DerivedDataCache/*
 *.ddc
 PhoneTest1/Content/ParagonGideon/*
+PhoneTest1/Content/StartContent/*
