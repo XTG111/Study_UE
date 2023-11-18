@@ -30,11 +30,11 @@ ATMagicProjectile::ATMagicProjectile()
 	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ATMagicProjectile::OnActorOverlap);
 	SphereComp->OnComponentHit.AddDynamic(this, &ATMagicProjectile::OnActorHit);
 
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> ParticleAsset(TEXT("/Content/StarterContent/Particles/P_Fire.P_Fire_C"));
-	if (ParticleAsset.Succeeded())
-	{
-		HitFX = ParticleAsset.Object;
-	}
+	//static ConstructorHelpers::FObjectFinder<UParticleSystem> ParticleAsset(TEXT("/Content/StarterContent/Particles/P_Fire.P_Fire_C"));
+	//if (ParticleAsset.Succeeded())
+	//{
+	//	HitFX = ParticleAsset.Object;
+	//}
 }
 
 // Called when the game starts or when spawned
@@ -64,7 +64,7 @@ void ATMagicProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AActor* Ot
 	FRotator Rot = this->GetActorRotation();
 
 	if (OtherActor && OtherActor != GetInstigator()) {
-		UGameplayStatics::SpawnEmitterAtLocation(this->EffectComp, HitFX, Loc, Rot);
+		//UGameplayStatics::SpawnEmitterAtLocation(this->EffectComp, HitFX, Loc, Rot);
 		Destroy();
 	}
 }

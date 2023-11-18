@@ -165,6 +165,9 @@ void ATCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	//primaryAttack
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &ATCharacter::PrimaryAttack_Anim);
 
+	//Jump
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ATCharacter::Jump);
+
 }
 
 
